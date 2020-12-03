@@ -1,15 +1,20 @@
 <!-- index.wxml -->
 <view class="wrapper">
-	<view class="banner">大图 1</view>
-	<view class="imges">中图 1</view>
-	<view class="list">循环列表</view>
-	<view class="router">
-		<ul>
-			<li>首页</li>
-			<li>充值</li>
-			<li>商城</li>
-			<li>心愿单</li>
-			<li>我的</li>
-		</ul>
-	</view>
+				<view class="banner">大图 1</view>
+				<view class="images">中图 1</view>
+				<view class="list-wrapper">
+								<view class="list-item" wx:for="{{for_list}}" wx:for-index="index" wx:for-item="item">
+												<view class="list-item-img">{{index}}</view>
+												<text class="list-item-text">{{item.name}}</text>
+								</view>
+				</view>
+				<view class="router">
+								<ul>
+												<li>首页</li>
+												<li>充值</li>
+												<li>商城</li>
+												<li>心愿单</li>
+												<li>我的</li>
+								</ul>
+				</view>
 </view>
